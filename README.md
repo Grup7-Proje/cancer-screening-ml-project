@@ -27,13 +27,3 @@ Projede kullanılan temel araştırma adımları ve veri işleme süreçleri aş
 * **Özellik Çıkarımı (Feature Extraction):** Veri setinden tıbbi açıdan anlamlı özniteliklerin seçilmesi.
 * **Modelleme:** *(Buraya kullandığınız yaklaşımları yazın: Örn. Sınıflandırma algoritmaları, derin öğrenme mimarileri vb.)*
 * **Değerlendirme (Evaluation):** Doğruluk (Accuracy), Hassasiyet (Precision), Duyarlılık (Recall) ve F1-Skoru metrikleri ile modelin performansı istatistiksel olarak ölçülmüştür.
-
-## ⚙️ Kurulum ve Kullanım
-
-Projeyi kendi ortamınızda incelemek ve çalıştırmak için aşağıdaki adımları izleyin:
-
-1. **Depoyu klonlayın:**
-   
-```bash
-   git clone [https://github.com/kullaniciadi/cancer-screening-ml-project.git](https://github.com/kullaniciadi/cancer-screening-ml-project.git)
-   cd cancer-screening-ml-project
