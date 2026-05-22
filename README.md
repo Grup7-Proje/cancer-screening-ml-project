@@ -7,7 +7,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
   <img src="https://img.shields.io/badge/Machine_Learning-FF9900?style=for-the-badge" alt="Machine Learning" />
-  <img src="https://img.shields.io/badge/Artificial_Intelligence-007ACC?style=for-the-badge" alt="Artificial Intelligence" />
+  <img src="https://img.shields.io/badge/CDC_BRFSS_Data-007ACC?style=for-the-badge" alt="Data" />
   <img src="https://img.shields.io/badge/Academic_Research-4CAF50?style=for-the-badge" alt="Academic Research" />
 </p>
 
@@ -15,15 +15,43 @@
 
 ## 📌 Proje Hakkında
 
-Bu proje, kanser taraması ve erken teşhis süreçlerini optimize etmek amacıyla geliştirilmiş bir makine öğrenmesi araştırmasıdır. Tıbbi görüntüleme ve veri seti analizlerinde insan hatasını en aza indirmek ve hekimler için güvenilir bir karar destek mekanizması sunmak hedeflenmektedir. 
+Bu proje, kanser taraması, risk faktörlerinin tespiti ve erken teşhis süreçlerini optimize etmek amacıyla geliştirilmiş bir makine öğrenmesi araştırmasıdır. Hastaların demografik bilgileri, yaşam tarzı alışkanlıkları ve genel sağlık durumlarına ilişkin veriler analiz edilerek, bireylerin kanser riski taşıyıp taşımadığı veya kanser tarama programlarına uyum gösterip göstermeyeceği tahmin edilmektedir.
 
-Üç farklı üniversitenin bilgi birikimi ve işbirliği ile disiplinlerarası bir akademik çalışma olarak hayata geçirilmiştir.
+Üç farklı üniversitenin bilgi birikimi ve işbirliği ile disiplinlerarası bir akademik çalışma olarak hayata geçirilen bu proje, koruyucu hekimlik politikaları için veri odaklı bir karar destek mekanizması sunmayı hedeflemektedir.
+
+## 📊 Veri Seti: 2024 BRFSS (SAS Transport Format)
+
+Çalışmamızda **CDC (Centers for Disease Control and Prevention)** tarafından yayınlanan [2024 BRFSS (Behavioral Risk Factor Surveillance System)](https://www.cdc.gov/brfss/index.html) veri seti kullanılmıştır. 
+
+* **Format:** Orijinal veri seti `SAS Transport Format (.xpt)` uzantılıdır.
+* **İçerik:** Kanser öyküsü (cilt kanseri ve diğer kanser türleri), sigara/alkol tüketimi, fiziksel aktivite, kronik hastalık geçmişi ve sosyodemografik anket cevapları.
+* **Veri Boyutu:** Veri seti oldukça büyük hacimli olduğundan (orijinal .xpt ve işlenmiş .csv dosyaları), GitHub reposunda barındırılmamaktadır (Bkz. *Kurulum*).
 
 ## 🔬 Metodoloji
 
-Projede kullanılan temel araştırma adımları ve veri işleme süreçleri aşağıdaki gibidir:
+Tabular anket verilerinden anlamlı sonuçlar üretebilmek için aşağıdaki veri bilimi boru hattı (pipeline) izlenmiştir:
 
-* **Veri Ön İşleme (Data Preprocessing):** Gürültü azaltma, normalizasyon ve eksik veri tamamlama.
-* **Özellik Çıkarımı (Feature Extraction):** Veri setinden tıbbi açıdan anlamlı özniteliklerin seçilmesi.
-* **Modelleme:** *(Buraya kullandığınız yaklaşımları yazın: Örn. Sınıflandırma algoritmaları, derin öğrenme mimarileri vb.)*
-* **Değerlendirme (Evaluation):** Doğruluk (Accuracy), Hassasiyet (Precision), Duyarlılık (Recall) ve F1-Skoru metrikleri ile modelin performansı istatistiksel olarak ölçülmüştür.
+1. **Veri Okuma ve Dönüştürme:** SAS `.xpt` formatındaki verilerin Python ortamına (`pandas.read_sas` kullanılarak) aktarılması ve Pandas DataFrame formatına dönüştürülmesi.
+2. **Veri Ön İşleme (Data Preprocessing):** 
+   * BRFSS özelindeki "Bilmiyorum/Reddedildi" (örn: 77, 99 kodlu) yanıtların eksik veri (NaN) olarak ele alınması.
+   * Hedef değişkenin (kanser tanısı / tarama durumu) belirlenmesi ve sınıf dengesizliklerinin (SMOTE vb. yöntemlerle) giderilmesi.
+3. **Özellik Mühendisliği (Feature Engineering):** Kanser teşhisi ile en çok korelasyon gösteren demografik ve davranışsal özelliklerin (Örn: `_AGEG5YR`, `SMOKE100`, `CHCSCNCR`) seçilmesi.
+4. **Modelleme:** Tabular verilerde yüksek performans gösteren makine öğrenmesi algoritmalarının eğitilmesi:
+   * *XGBoost, Random Forest, Logistic Regression ve LightGBM*
+5. **Değerlendirme (Evaluation):** Modeller; Doğruluk (Accuracy), Hassasiyet (Precision), Duyarlılık (Recall), F1-Skoru ve ROC-AUC metrikleri ile istatistiksel olarak ölçülmüş ve birbirleriyle kıyaslanmıştır.
+
+## 📁 Proje Yapısı
+
+```text
+├── data/                  # Veri setleri klasörü (GitHub'a YÜKLENMEZ - .gitignore içindedir)
+│   ├── brfss2024.xpt      # Orijinal SAS verisi (Dış kaynaklardan indirilmelidir)
+│   └── processed_data.csv # Temizlenmiş veri
+├── notebooks/             # Veri analizi ve ön işleme adımlarını içeren Jupyter Not Defterleri
+│   ├── 01_data_loading_xpt.ipynb
+│   ├── 02_eda_and_cleaning.ipynb
+│   └── 03_model_training.ipynb
+├── src/                   # Yeniden kullanılabilir Python modülleri
+│   ├── data_loader.py     # SAS xpt okuma fonksiyonları
+│   └── evaluate.py        # Metrik hesaplama fonksiyonları
+├── requirements.txt       # Gerekli kütüphaneler
+└── README.md              # Proje dökümantasyonu
