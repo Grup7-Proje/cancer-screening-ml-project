@@ -55,20 +55,20 @@ Terminalinizi (CMD/Bash) açın ve projeyi bilgisayarınıza indirin:
 git clone [https://github.com/Grup7-Proje/cancer-screening-ml-project.git](https://github.com/Grup7-Proje/cancer-screening-ml-project.git)
 cd cancer-screening-ml-project
 
-2. Veri Setlerini İndirin ve Yerleştirin
+**2. Veri Setlerini İndirin ve Yerleştirin
 
-    Ortak iletişim kanalımızda sabitlenen Google Drive bağlantısına gidin.
+Ortak iletişim kanalımızda sabitlenen Google Drive bağlantısına gidin.
 
-    İndirdiğiniz ham .xpt dosyasını data/raw/ klasörünün içine yerleştirin.
+İndirdiğiniz ham .xpt dosyasını data/raw/ klasörünün içine yerleştirin.
 
-    İndirdiğiniz temizlenmiş .csv dosyalarını (X_train_hazir.csv vb.) data/processed/ klasörünün içine yerleştirin.
+ İndirdiğiniz temizlenmiş .csv dosyalarını (X_train_hazir.csv vb.) data/processed/ klasörünün içine yerleştirin.
 
-3. Gerekli Kütüphaneleri Yükleyin
+**3. Gerekli Kütüphaneleri Yükleyin
 Projenin çalışması için temel veri bilimi kütüphanelerine ihtiyacınız vardır:
 
 pip install pandas numpy scikit-learn
 
-4. Modelleri Çalıştırın
+**4. Modelleri Çalıştırın
 Tüm veriler klasörlerde hazır olduğuna göre, src/ klasörü altındaki çalışma dosyalarını çalıştırarak eğitime ve testlere başlayabilirsiniz
 ---
 <div align="center">
