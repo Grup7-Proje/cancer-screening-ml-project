@@ -1,1 +1,1 @@
-Makine öğrenmesi kısmında sorumlu olan arkadaşlar bitmiş modellerini buraya ekleyecekler.
+Proje ile ilgili yüklenebilir tüm kodlar buraya yüklenecek.
