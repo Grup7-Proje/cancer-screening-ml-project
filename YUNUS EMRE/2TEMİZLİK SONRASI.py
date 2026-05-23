@@ -39,7 +39,6 @@ print(f"Testte kanser oranı  : %{y_test.mean()*100:.1f}")
 
 #Sıra NaN'ları doldurmak için Iterative Imputer'da.
 
-
 # KNN aşırı uzun sürdüğü için yerine çok daha hızlı çalışan makine öğrenmesi tabanlı IterativeImputer eklendi.
 imputer = IterativeImputer(random_state=42, max_iter=10)
 
