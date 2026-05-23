@@ -54,6 +54,7 @@ Terminalinizi (CMD/Bash) açın ve projeyi bilgisayarınıza indirin:
 *bash
 git clone [https://github.com/Grup7-Proje/cancer-screening-ml-project.git](https://github.com/Grup7-Proje/cancer-screening-ml-project.git)
 cd cancer-screening-ml-project
+
 2. Veri Setlerini İndirin ve Yerleştirin
 
     Ortak iletişim kanalımızda sabitlenen Google Drive bağlantısına gidin.
@@ -64,7 +65,6 @@ cd cancer-screening-ml-project
 
 3. Gerekli Kütüphaneleri Yükleyin
 Projenin çalışması için temel veri bilimi kütüphanelerine ihtiyacınız vardır:
-Bash
 
 pip install pandas numpy scikit-learn
 
