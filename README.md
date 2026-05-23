@@ -50,8 +50,11 @@ Tabular anket verilerinden anlamlı sonuçlar üretebilmek için aşağıdaki ve
 Veri dosyaları `.gitignore` ile korunduğu için GitHub'da yer almamaktadır. Projeyi kendi bilgisayarınızda çalıştırmak için aşağıdaki adımları sırasıyla izleyin:
 
 **1. Repoyu Klonlayın**
+Veri dosyaları `.gitignore` ile korunduğu için GitHub'da yer almamaktadır. Projeyi kendi bilgisayarınızda çalıştırmak için aşağıdaki adımları sırasıyla izleyin:
+
+**1. Repoyu Klonlayın**
 Terminalinizi (CMD/Bash) açın ve projeyi bilgisayarınıza indirin:
-bash
+*bash
 git clone [https://github.com/Grup7-Proje/cancer-screening-ml-project.git](https://github.com/Grup7-Proje/cancer-screening-ml-project.git)
 cd cancer-screening-ml-project
 
