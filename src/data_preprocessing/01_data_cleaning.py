@@ -13,7 +13,6 @@ df.columns = [
 
 # Hedef ve bağımsız değişkenleri belirtiriz.
 HEDEF = 'CHCOCNC1' #genel kanser sorusu. Amacımız genel olarak kanser sebeplerini bulmak.
-#HOCANIN DEYİMİ İLE =    
 
 BAGIMSIZ = [
     'CHCSCNC1',
