@@ -50,14 +50,26 @@ Tabular anket verilerinden anlamlı sonuçlar üretebilmek için aşağıdaki ve
 Veri dosyaları `.gitignore` ile korunduğu için GitHub'da yer almamaktadır. Projeyi kendi bilgisayarınızda çalıştırmak için aşağıdaki adımları sırasıyla izleyin:
 
 **1. Repoyu Klonlayın**
-Veri dosyaları `.gitignore` ile korunduğu için GitHub'da yer almamaktadır. Projeyi kendi bilgisayarınızda çalıştırmak için aşağıdaki adımları sırasıyla izleyin:
-
-**1. Repoyu Klonlayın**
 Terminalinizi (CMD/Bash) açın ve projeyi bilgisayarınıza indirin:
 *bash
 git clone [https://github.com/Grup7-Proje/cancer-screening-ml-project.git](https://github.com/Grup7-Proje/cancer-screening-ml-project.git)
 cd cancer-screening-ml-project
+2. Veri Setlerini İndirin ve Yerleştirin
 
+    Ortak iletişim kanalımızda sabitlenen Google Drive bağlantısına gidin.
+
+    İndirdiğiniz ham .xpt dosyasını data/raw/ klasörünün içine yerleştirin.
+
+    İndirdiğiniz temizlenmiş .csv dosyalarını (X_train_hazir.csv vb.) data/processed/ klasörünün içine yerleştirin.
+
+3. Gerekli Kütüphaneleri Yükleyin
+Projenin çalışması için temel veri bilimi kütüphanelerine ihtiyacınız vardır:
+Bash
+
+pip install pandas numpy scikit-learn
+
+4. Modelleri Çalıştırın
+Tüm veriler klasörlerde hazır olduğuna göre, src/ klasörü altındaki çalışma dosyalarını çalıştırarak eğitime ve testlere başlayabilirsiniz
 ---
 <div align="center">
   <img width="736" height="887" alt="ataturk" src="https://github.com/user-attachments/assets/78fbb9f4-3472-43f3-b809-440d3070ed84" />
