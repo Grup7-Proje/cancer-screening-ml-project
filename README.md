@@ -45,7 +45,7 @@ Tabular anket verilerinden anlamlı sonuçlar üretebilmek için aşağıdaki ve
 
 ---
 
-6. ## ⚙️ Kurulum ve Kullanım (Ekip İçi Rehber)
+## ⚙️ Kurulum ve Kullanım (Ekip İçi Rehber)
 
 Veri dosyaları `.gitignore` ile korunduğu için GitHub'da yer almamaktadır. Projeyi kendi bilgisayarınızda çalıştırmak için aşağıdaki adımları sırasıyla izleyin:
 
