@@ -20,11 +20,11 @@ model_lr = LogisticRegression(
     random_state=42
 )
 
-# HİPERPARAMETRE OPTİMİZASYONU — GRID SEARCH
-# C parametresi: ne kadar regularization uygulanacak?
-# Küçük C = çok regularization = daha basit model
+# HİPERPARAMETRE OPTİMİZASYONU
+# C parametresi: ne kadar regularization uygulanacak sorusuna yanıt verecek
+# Küçük C = çok regularization = daha basit model 
 # Büyük C = az regularization = daha karmaşık model
-# cv=5: veriyi 5 parçaya böl, 5 kez eğit/test et, ortala
+# cv=5: veriyi 5 parçaya böl, 5 kez eğit/test et, ortala.
 # scoring='f1': en iyi C'yi F1 skoruna göre seç
 
 param_grid = {'C': [0.01, 0.1, 1, 10, 100]}
