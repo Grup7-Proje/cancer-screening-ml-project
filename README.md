@@ -28,7 +28,7 @@ Bu proje, kanser taraması, risk faktörlerinin tespiti ve erken teşhis süreç
 
 * **Format:** Orijinal veri seti `SAS Transport Format (.xpt)` uzantılıdır.
 * **İçerik:** Kanser öyküsü (cilt kanseri ve diğer kanser türleri), sigara/alkol tüketimi, fiziksel aktivite, kronik hastalık geçmişi ve sosyodemografik anket cevapları.
-* **Veri Boyutu:** Veri seti oldukça büyük hacimli olduğundan (orijinal .xpt ve işlenmiş .csv dosyaları), GitHub reposunda barındırılmamaktadır (Bkz. *Kurulum*).
+* **Veri Boyutu:** Veri seti oldukça büyük hacimli olduğundan (orijinal .xpt ve işlenmiş .csv dosyaları), GitHub reposunda barındırılmamaktadır (Bkz. *data/drive.txt*).
 
 ## 🔬 Metodoloji
 
