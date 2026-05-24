@@ -68,7 +68,7 @@ Projenin çalışması için temel veri bilimi kütüphanelerine ihtiyacınız v
 
 *pip install pandas numpy scikit-learn*
 
-**4. Modelleri Çalıştırın**
+4. Modelleri Çalıştırın
 Tüm veriler klasörlerde hazır olduğuna göre, src/ klasörü altındaki çalışma dosyalarını çalıştırarak eğitime ve testlere başlayabilirsiniz
 ---
 <div align="center">
