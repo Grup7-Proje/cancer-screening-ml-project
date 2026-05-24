@@ -64,7 +64,7 @@ Ortak iletişim kanalımızda sabitlenen Google Drive bağlantısına gidin.
 İndirdiğiniz temizlenmiş .csv dosyalarını (X_train_hazir.csv vb.) data/processed/ klasörünün içine yerleştirin.
 
 **3. Gerekli Kütüphaneleri Yükleyin**
-Projenin çalışması için temel veri bilimi kütüphanelerine ihtiyacınız vardır:
+Projenin çalışması için temel veri bilimi kütüphanelerine ihtiyacınız vardır
 
 *pip install pandas numpy scikit-learn*
 
