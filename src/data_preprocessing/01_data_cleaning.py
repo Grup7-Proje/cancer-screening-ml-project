@@ -53,7 +53,6 @@ df['_RFHLTH']   = df['_RFHLTH'].replace([9], np.nan) #
 df['INCOME3']   = df['INCOME3'].replace([77, 99], np.nan)
 df['EDUCA']     = df['EDUCA'].replace([9], np.nan)
 
-#BURAYA TEKRAR BAKARIM... Şimdi kalan şey aykırı değer tespiti sonrası değer sıkıştırma yapmaktı fakat şuanki listede aykırı değer yok.?
 
 
 #Bazı sorular sadece evet ve hayır olarak cevaplandığı için modelin daha rahat öğrenmesi bakımından 1 ve 2 ile kodlanmış evet hayır
