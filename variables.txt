@@ -8,7 +8,7 @@ CHECKUP1: About how long has it been since you last visited a doctor for a routi
 _AGEG5YR: How old are you? (14 level age category)
 SMOKE100: Have you ever smoked at least 100 cigarettes in your entire life?
 DIABETE4: Ever told you had diabetes?
-EXERANY2: Durin the past month, other than your regular job, did you do participate in any physical activites or exersices?
+EXERANY2: During the past month, other than your regular job, did you do participate in any physical activites or exersices?
 ASTHMA3: Ever told you had asthma?
 CHCKDNY2: Not including kidney stones, bladder infection or incontinence, were you ever told you had kidney disease?
 HAVARTH4: Ever told you had some form of arthritis, rheumatoid arthritis, gout, lupus, or fibromyalgia?
