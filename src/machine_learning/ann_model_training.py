@@ -9,6 +9,10 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Dropout
 from tensorflow.keras.callbacks import EarlyStopping
 
+# 0. Tekrarlanabilirlik (Reproducibility) İçin Rastgelelik Sabitleme
+np.random.seed(42)
+tf.random.set_seed(42)
+
 # 1. Hazır Veri Setlerini Yükleme
 print("Veri setleri yükleniyor...")
 X_train = pd.read_csv('X_train_hazir.csv')
