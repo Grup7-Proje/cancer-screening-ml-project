@@ -16,13 +16,13 @@
 
 ---
 
-## 📌 Proje Hakkında
+## Proje Hakkında
 
 Bu proje, kanser taraması, risk faktörlerinin tespiti ve erken teşhis süreçlerini optimize etmek amacıyla geliştirilmiş bir makine öğrenmesi araştırmasıdır. Hastaların demografik bilgileri, yaşam tarzı alışkanlıkları ve genel sağlık durumlarına ilişkin veriler analiz edilerek, bireylerin kanser riski taşıyıp taşımadığı veya kanser tarama programlarına uyum gösterip göstermeyeceği tahmin edilmektedir.
 
 Üç farklı üniversitenin bilgi birikimi ve işbirliği ile disiplinlerarası bir akademik çalışma olarak hayata geçirilen bu proje, koruyucu hekimlik politikaları için veri odaklı bir karar destek mekanizması sunmayı hedeflemektedir.
 
-## 📊 Veri Seti: 2024 BRFSS (SAS Transport Format)
+## Veri Seti: 2024 BRFSS (SAS Transport Format)
 
 Çalışmamızda **CDC (Centers for Disease Control and Prevention)** tarafından yayınlanan [2024 BRFSS (Behavioral Risk Factor Surveillance System)](https://www.cdc.gov/brfss/index.html) veri seti kullanılmıştır. 
 
@@ -30,7 +30,7 @@ Bu proje, kanser taraması, risk faktörlerinin tespiti ve erken teşhis süreç
 * **İçerik:** Kanser öyküsü (cilt kanseri ve diğer kanser türleri), sigara/alkol tüketimi, fiziksel aktivite, kronik hastalık geçmişi ve sosyodemografik anket cevapları.
 * **Veri Boyutu:** Veri seti oldukça büyük hacimli olduğundan (orijinal .xpt ve işlenmiş .csv dosyaları), GitHub reposunda barındırılmamaktadır (Bkz. *data/drive.txt*).
 
-## 🔬 Metodoloji
+## Metodoloji
 
 Tabular anket verilerinden anlamlı sonuçlar üretebilmek için aşağıdaki veri bilimi boru hattı (pipeline) izlenmiştir:
 
