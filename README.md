@@ -37,10 +37,10 @@ Tabular anket verilerinden anlamlı sonuçlar üretebilmek için aşağıdaki ve
 2. **Veri Ön İşleme (Data Preprocessing):** 
    * Ana ve bağımsız değişkenlerin belirlenmesi.
    ```
-   **Ana Değişkenler:**
+   Ana Değişkenler:
    CHCOCNC1: Melanom veya herhangi bir kanser teşhisi konuldu mu? (30 kategori)
 
-   **Bağımsız Değişkenler:**
+   Bağımsız Değişkenler:
    CHCSCNC1: Cilt kanseri veya melanom teşhisi konuldu mu?
    CHECKUP1: Rutin kontrolünüz için en son ne zaman doktora gittiniz?
    _AGEG5YR: Kaç yaşınızdasınız? (14 kategori)
