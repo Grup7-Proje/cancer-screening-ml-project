@@ -35,10 +35,10 @@ Tabular anket verilerinden anlamlı sonuçlar üretebilmek için aşağıdaki ve
 
 1. **Veri Okuma ve Dönüştürme:** CDC BRFSS 2024 veri setinin Codebook'u, veri mimarlarınca tek tek incelenmiş olup, ana ve bağımsız değişkenler kararlaştırılmıştır.
 <div align="center">
-  <img width="921" height="513" alt="CHCOCNC1" src="https://github.com/user-attachments/assets/58d2455a-a160-45a1-b2bb-d901017832e6" />
-  <p><small>resim 1.0 "Ana Değişken CHCOCNC1"</small></p>
+  <img width="885" height="488" alt="CHCOCNC1" src="https://github.com/user-attachments/assets/37263639-0a21-426e-8a13-092f0d1d697a" />
+  <p><small>resim 1.0 - Ana Değişken CHCOCNC1</small></p>
   <img width="885" height="489" alt="SMOKE100" src="https://github.com/user-attachments/assets/5b574605-cd30-45c4-aadc-d14a90f1b7a6" />
-  <p><small>resim 2.0 "Yan Değişken Örn. SMOKE100"</small></p>
+  <p><small>resim 2.0 - Yan Değişken Örn. SMOKE100</small></p>
 </div> 
 
 3. SAS `.xpt` formatındaki verilerin Python ortamına aktarılması ve Pandas DataFrame formatına dönüştürülmesi.
