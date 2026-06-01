@@ -33,8 +33,16 @@ Bu proje, kanser taraması, risk faktörlerinin tespiti ve erken teşhis süreç
 
 Tabular anket verilerinden anlamlı sonuçlar üretebilmek için aşağıdaki veri bilimi boru hattı (pipeline) izlenmiştir:
 
-1. **Veri Okuma ve Dönüştürme:** SAS `.xpt` formatındaki verilerin Python ortamına (`pandas.read_sas` kullanılarak) aktarılması ve Pandas DataFrame formatına dönüştürülmesi.
-2. **Veri Ön İşleme (Data Preprocessing):** 
+1. **Veri Okuma ve Dönüştürme:** CDC BRFSS 2024 veri setinin Codebook'u, veri mimarlarınca tek tek incelenmiş olup, ana ve bağımsız değişkenler kararlaştırılmıştır.
+<div align="center">
+  <img width="921" height="513" alt="CHCOCNC1" src="https://github.com/user-attachments/assets/58d2455a-a160-45a1-b2bb-d901017832e6" />
+  <p>resim 1.0 "Ana Değişken CHCOCNC1"</p>
+  <img width="885" height="489" alt="SMOKE100" src="https://github.com/user-attachments/assets/5b574605-cd30-45c4-aadc-d14a90f1b7a6" />
+  <p>resim 2.0 "Yan Değişken Örn. SMOKE100"</p>
+</div> 
+
+3. SAS `.xpt` formatındaki verilerin Python ortamına aktarılması ve Pandas DataFrame formatına dönüştürülmesi.
+4. **Veri Ön İşleme (Data Preprocessing):** 
    * Ana ve bağımsız değişkenlerin belirlenmesi.
    ```
    Ana Değişkenler:
@@ -59,9 +67,9 @@ Tabular anket verilerinden anlamlı sonuçlar üretebilmek için aşağıdaki ve
    ```
    * BRFSS özelindeki "Bilmiyorum/Reddedildi" (örn: 77, 99 kodlu) yanıtlarının eksik veri (NaN) olarak ele alınması.
    * Hedef değişkenin (kanser tanısı / tarama durumu) belirlenmesi ve sınıf dengesizliklerinin (SMOTE vb. yöntemlerle) giderilmesi.
-4. **Özellik Mühendisliği (Feature Engineering):** Genel kanser teşhisi ile en çok korelasyon gösteren demografik ve davranışsal özelliklerin (Örn: `_AGEG5YR`, `SMOKE100`, `CHCSCNCR`) seçilmesi.
-5. **Modelleme:** Tabular verilerde yüksek performans gösteren Lojistik Regresyon, Bayesyen Yaklaşım ve Yapay Sinir Ağları kullanılarak oluşturulan modellerin eğitilmesi:
-6. **Değerlendirme (Evaluation):** Modeller; Doğruluk (Accuracy), Hassasiyet (Precision), Duyarlılık (Recall), F1-Skoru ve ROC-AUC metrikleri ile istatistiksel olarak ölçülmüş ve birbirleriyle kıyaslanmıştır.
+5. **Özellik Mühendisliği (Feature Engineering):** Genel kanser teşhisi ile en çok korelasyon gösteren demografik ve davranışsal özelliklerin (Örn: `_AGEG5YR`, `SMOKE100`, `CHCSCNCR`) seçilmesi.
+6. **Modelleme:** Tabular verilerde yüksek performans gösteren Lojistik Regresyon, Bayesyen Yaklaşım ve Yapay Sinir Ağları kullanılarak oluşturulan modellerin eğitilmesi:
+7. **Değerlendirme (Evaluation):** Modeller; Doğruluk (Accuracy), Hassasiyet (Precision), Duyarlılık (Recall), F1-Skoru ve ROC-AUC metrikleri ile istatistiksel olarak ölçülmüş ve birbirleriyle kıyaslanmıştır.
 ---
 
 ## Mimari
