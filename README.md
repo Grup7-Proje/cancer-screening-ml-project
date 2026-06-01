@@ -1,5 +1,5 @@
 <div align="center">
-  <img width="549" height="454" alt="CBU KOU HITIT" src="https://github.com/user-attachments/assets/b38dd701-1907-45c0-8777-86a10b996a39" />
+  <img width="2272" height="1880" alt="CBU KOU HITU" src="https://github.com/user-attachments/assets/505ef481-f8ca-44cd-90fe-25229a41150d" />
 </div>
 
 <div align="center">
