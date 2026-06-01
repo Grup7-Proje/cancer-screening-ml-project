@@ -2,10 +2,6 @@
   <img width="2197" height="704" alt="CBU KOU HITU" src="https://github.com/user-attachments/assets/79f15f90-16a5-49cf-bae5-0252bfb0d502" />
 </div>
 
-<div align="center">
-  <img width="480" height="320" alt="Flag_of_Turkey svg" src="https://github.com/user-attachments/assets/3eabddf6-0791-4fdf-a1a2-1241124a0aa3" />
-</div>  
-<div align="center">
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=500&size=26&pause=1000&color=007ACC&center=true&vCenter=true&width=800&lines=Cancer+Screening+ML+Project;Erken+Teşhis+İçin+Makine+Öğrenmesi;KOÜ+%7C+MCBÜ+%7C+HİTÜ" alt="Proje Başlığı Animasyonu" />
   
   <p><b>Kocaeli Üniversitesi, Manisa Celal Bayar Üniversitesi ve Hitit Üniversitesi öğrencileri işbirliği ile geliştirilmiştir.</b></p>
@@ -90,6 +86,11 @@ cancer-screening-ml-project/
 └── Extras
 ```
 ---
+
+<div align="center">
+  <img width="480" height="320" alt="Flag_of_Turkey svg" src="https://github.com/user-attachments/assets/3eabddf6-0791-4fdf-a1a2-1241124a0aa3" />
+</div>  
+<div align="center">
 <div align="center">
   <img width="552" height="664" alt="ataturk" src="https://github.com/user-attachments/assets/78fbb9f4-3472-43f3-b809-440d3070ed84" />
   <p>"1881-193∞"</p>
