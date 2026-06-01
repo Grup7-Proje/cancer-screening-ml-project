@@ -1,4 +1,5 @@
 <div align="center">
+  <img width="2048" height="2048" alt="Gemini_Generated_Image_zhae5azhae5azhae" src="https://github.com/user-attachments/assets/15fab525-10ba-4a37-a4a4-850d86cf3001" />
   <img width="480" height="320" alt="Flag_of_Turkey svg" src="https://github.com/user-attachments/assets/3eabddf6-0791-4fdf-a1a2-1241124a0aa3" />
 </div>  
 <div align="center">
