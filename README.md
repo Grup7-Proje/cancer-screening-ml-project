@@ -77,7 +77,7 @@ cancer-screening-ml-project/
 ├── README.md           # Proje tanıtımı
 └── Extras
 ```
-
+---
 <div align="center">
   <img width="552" height="664" alt="ataturk" src="https://github.com/user-attachments/assets/78fbb9f4-3472-43f3-b809-440d3070ed84" />
   <p>"1881-193∞"</p>
