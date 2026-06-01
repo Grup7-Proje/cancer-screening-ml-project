@@ -63,7 +63,9 @@ Tabular anket verilerinden anlamlı sonuçlar üretebilmek için aşağıdaki ve
 5. **Modelleme:** Tabular verilerde yüksek performans gösteren Lojistik Regresyon, Bayesyen Yaklaşım ve Yapay Sinir Ağları kullanılarak oluşturulan modellerin eğitilmesi:
 6. **Değerlendirme (Evaluation):** Modeller; Doğruluk (Accuracy), Hassasiyet (Precision), Duyarlılık (Recall), F1-Skoru ve ROC-AUC metrikleri ile istatistiksel olarak ölçülmüş ve birbirleriyle kıyaslanmıştır.
 ---
-```text
+
+## Mimari
+```
 cancer-screening-ml-project/
 │
 ├── data/               # CDC BRFSS ham (.csv) veri setleri
