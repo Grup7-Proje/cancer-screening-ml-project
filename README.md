@@ -37,11 +37,10 @@ Tabular anket verilerinden anlamlı sonuçlar üretebilmek için aşağıdaki ve
 2. **Veri Ön İşleme (Data Preprocessing):** 
    * Ana ve bağımsız değişkenlerin belirlenmesi.
    ```
-   Ana Değişkenler:
+   **Ana Değişkenler:**
    CHCOCNC1: Melanom veya herhangi bir kanser teşhisi konuldu mu? (30 kategori)
 
-   Bağımsız Değişkenler:
-
+   **Bağımsız Değişkenler:**
    CHCSCNC1: Cilt kanseri veya melanom teşhisi konuldu mu?
    CHECKUP1: Rutin kontrolünüz için en son ne zaman doktora gittiniz?
    _AGEG5YR: Kaç yaşınızdasınız? (14 kategori)
@@ -58,7 +57,7 @@ Tabular anket verilerinden anlamlı sonuçlar üretebilmek için aşağıdaki ve
    EDUCA:    Tamamladığınız en yüksek eğitim durumunuz nedir?
    _BMI5CAT: Vücut Kitle Endeksiniz nedir? (4 categories of BMI)
    ```
-   * BRFSS özelindeki "Bilmiyorum/Reddedildi" (örn: 77, 99 kodlu) yanıtların eksik veri (NaN) olarak ele alınması.
+   * BRFSS özelindeki "Bilmiyorum/Reddedildi" (örn: 77, 99 kodlu) yanıtlarının eksik veri (NaN) olarak ele alınması.
    * Hedef değişkenin (kanser tanısı / tarama durumu) belirlenmesi ve sınıf dengesizliklerinin (SMOTE vb. yöntemlerle) giderilmesi.
 4. **Özellik Mühendisliği (Feature Engineering):** Genel kanser teşhisi ile en çok korelasyon gösteren demografik ve davranışsal özelliklerin (Örn: `_AGEG5YR`, `SMOKE100`, `CHCSCNCR`) seçilmesi.
 5. **Modelleme:** Tabular verilerde yüksek performans gösteren Lojistik Regresyon, Bayesyen Yaklaşım ve Yapay Sinir Ağları kullanılarak oluşturulan modellerin eğitilmesi:
