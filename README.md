@@ -63,6 +63,18 @@ Tabular anket verilerinden anlamlı sonuçlar üretebilmek için aşağıdaki ve
 5. **Modelleme:** Tabular verilerde yüksek performans gösteren Lojistik Regresyon, Bayesyen Yaklaşım ve Yapay Sinir Ağları kullanılarak oluşturulan modellerin eğitilmesi:
 6. **Değerlendirme (Evaluation):** Modeller; Doğruluk (Accuracy), Hassasiyet (Precision), Duyarlılık (Recall), F1-Skoru ve ROC-AUC metrikleri ile istatistiksel olarak ölçülmüş ve birbirleriyle kıyaslanmıştır.
 ---
+```text
+cancer-screening-ml-project/
+│
+├── data/               # CDC BRFSS ham (.csv) veri setleri
+├── notebooks/          # Keşifçi Veri Analizi (EDA) ve prototip modelleme Jupyter Notebook'ları
+├── src/                # Model pipeline, veri ön işleme, eğitim ve tahmin Python (.py) betikleri
+├── docs/               # Araştırma raporları, literatür taraması ve teknik mimari belgeleri
+├── .gitignore          # Git takibinden dışlanacak gereksiz ve büyük dosyalar
+├── .gitkeep            # Boş klasör yapılarının korunması için
+└── README.md           # Ana proje dokümantasyonu
+```
+
 <div align="center">
   <img width="552" height="664" alt="ataturk" src="https://github.com/user-attachments/assets/78fbb9f4-3472-43f3-b809-440d3070ed84" />
   <p>"1881-193∞"</p>
