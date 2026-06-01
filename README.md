@@ -33,7 +33,7 @@ Bu proje, kanser taraması, risk faktörlerinin tespiti ve erken teşhis süreç
 
 Tabular anket verilerinden anlamlı sonuçlar üretebilmek için aşağıdaki veri bilimi boru hattı (pipeline) izlenmiştir:
 
-1. **Veri Okuma ve Dönüştürme:** CDC BRFSS 2024 veri setinin Codebook'u, veri mimarlarınca tek tek incelenmiş olup, ana ve bağımsız değişkenler kararlaştırılmıştır.
+1. **Veri Okuma ve Dönüştürme:** CDC BRFSS 2024 veri setinin [Codebook'u](https://www.cdc.gov/brfss/annual_data/2024/zip/codebook24_llcp-v2-508.zip), veri mimarlarınca detaylıca incelenmiş olup, proje konusu kapsamında ana ve bağımsız değişkenler kararlaştırılmıştır.
 <div align="center">
   <img width="885" height="488" alt="CHCOCNC1" src="https://github.com/user-attachments/assets/37263639-0a21-426e-8a13-092f0d1d697a" />
   <p><small>resim 1.0 - Ana Değişken CHCOCNC1</small></p>
