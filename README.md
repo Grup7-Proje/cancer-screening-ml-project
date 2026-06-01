@@ -26,7 +26,6 @@ Bu proje, kanser taraması, risk faktörlerinin tespiti ve erken teşhis süreç
 
 Çalışmamızda **CDC (Centers for Disease Control and Prevention)** tarafından yayınlanan [2024 BRFSS (Behavioral Risk Factor Surveillance System)](https://www.cdc.gov/brfss/index.html) veri seti kullanılmıştır. 
 
-* **Format:** Orijinal veri seti `SAS Transport Format (.xpt)` uzantılıdır.
 * **İçerik:** Kanser öyküsü (cilt kanseri ve diğer kanser türleri), sigara/alkol tüketimi, fiziksel aktivite, kronik hastalık geçmişi ve sosyodemografik anket cevapları.
 * **Veri Boyutu:** Veri seti oldukça büyük hacimli olduğundan (orijinal .xpt ve işlenmiş .csv dosyaları), GitHub reposunda barındırılmamaktadır (Bkz. *data/drive.txt*).
 
@@ -36,12 +35,34 @@ Tabular anket verilerinden anlamlı sonuçlar üretebilmek için aşağıdaki ve
 
 1. **Veri Okuma ve Dönüştürme:** SAS `.xpt` formatındaki verilerin Python ortamına (`pandas.read_sas` kullanılarak) aktarılması ve Pandas DataFrame formatına dönüştürülmesi.
 2. **Veri Ön İşleme (Data Preprocessing):** 
+   * Ana ve bağımsız değişkenlerin belirlenmesi.
+   ```
+   Ana Değişkenler:
+   CHCOCNC1: Melanom veya herhangi bir kanser teşhisi konuldu mu? (30 kategori)
+
+   Bağımsız Değişkenler:
+
+   CHCSCNC1: Cilt kanseri veya melanom teşhisi konuldu mu?
+   CHECKUP1: Rutin kontrolünüz için en son ne zaman doktora gittiniz?
+   _AGEG5YR: Kaç yaşınızdasınız? (14 kategori)
+   SMOKE100: Hayatınız boyunca en az 100 sigara içtniz mi?
+   DIABETE4: Daha önce diyabet teşhisi konuldu mu?
+   EXERANY2: Geçtiğimiz ay boyunca, işiniz hariç, fiziksel aktivite veya egzersiz yaptınız mı?
+   ASTHMA3:  Daha önce astım teşhisi konuldu mu?
+   CHCKDNY2: Size hiç Böbrek taşı, mesane enfeksiyonu veya idrar kaçırmak hariç böbrek hastalığı teşhisi konuldu mu?
+   HAVARTH4: Size hiç artrit, romatoid artrit, gut, lupus veya fibromiyalji gibi bir rahatsızlığınız olduğu söylendi mi?
+   CVDINFR4: Daha önce kalp krizi (miyokard enfarktüsü) geçirdiniz mi?
+   PERSDOC3: Bir veya bir grup doktorun kişisel sağlık sağlayıcınız olduğunu düşünüyor musunuz?
+   _RFHLTH:  Sağlık durum sorusu
+   INCOME3:  Tüm gelir kaynaklarınızdan gelen yllık geliriniz ne kadar? (11 kategori)
+   EDUCA:    Tamamladığınız en yüksek eğitim durumunuz nedir?
+   _BMI5CAT: Vücut Kitle Endeksiniz nedir? (4 categories of BMI)
+   ```
    * BRFSS özelindeki "Bilmiyorum/Reddedildi" (örn: 77, 99 kodlu) yanıtların eksik veri (NaN) olarak ele alınması.
    * Hedef değişkenin (kanser tanısı / tarama durumu) belirlenmesi ve sınıf dengesizliklerinin (SMOTE vb. yöntemlerle) giderilmesi.
-3. **Özellik Mühendisliği (Feature Engineering):** Kanser teşhisi ile en çok korelasyon gösteren demografik ve davranışsal özelliklerin (Örn: `_AGEG5YR`, `SMOKE100`, `CHCSCNCR`) seçilmesi.
-4. **Modelleme:** Tabular verilerde yüksek performans gösteren makine öğrenmesi algoritmalarının eğitilmesi:
-  
-5. **Değerlendirme (Evaluation):** Modeller; Doğruluk (Accuracy), Hassasiyet (Precision), Duyarlılık (Recall), F1-Skoru ve ROC-AUC metrikleri ile istatistiksel olarak ölçülmüş ve birbirleriyle kıyaslanmıştır.
+4. **Özellik Mühendisliği (Feature Engineering):** Genel kanser teşhisi ile en çok korelasyon gösteren demografik ve davranışsal özelliklerin (Örn: `_AGEG5YR`, `SMOKE100`, `CHCSCNCR`) seçilmesi.
+5. **Modelleme:** Tabular verilerde yüksek performans gösteren Lojistik Regresyon, Bayesyen Yaklaşım ve Yapay Sinir Ağları kullanılarak oluşturulan modellerin eğitilmesi:
+6. **Değerlendirme (Evaluation):** Modeller; Doğruluk (Accuracy), Hassasiyet (Precision), Duyarlılık (Recall), F1-Skoru ve ROC-AUC metrikleri ile istatistiksel olarak ölçülmüş ve birbirleriyle kıyaslanmıştır.
 ---
 <div align="center">
   <img width="552" height="664" alt="ataturk" src="https://github.com/user-attachments/assets/78fbb9f4-3472-43f3-b809-440d3070ed84" />
