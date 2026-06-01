@@ -68,13 +68,14 @@ Tabular anket verilerinden anlamlı sonuçlar üretebilmek için aşağıdaki ve
 ```
 cancer-screening-ml-project/
 │
-├── data/               # CDC BRFSS ham (.csv) veri setleri
+├── data/               # CDC BRFSS ham ve düzenlenmiş (.csv) veri setleri
 ├── notebooks/          # Keşifçi Veri Analizi (EDA) ve prototip modelleme Jupyter Notebook'ları
 ├── src/                # Model pipeline, veri ön işleme, eğitim ve tahmin Python (.py) betikleri
 ├── docs/               # Araştırma raporları, literatür taraması ve teknik mimari belgeleri
 ├── .gitignore          # Git takibinden dışlanacak gereksiz ve büyük dosyalar
 ├── .gitkeep            # Boş klasör yapılarının korunması için
-└── README.md           # Ana proje dokümantasyonu
+├── README.md           # Proje tanıtımı
+└── Extras
 ```
 
 <div align="center">
