@@ -1,2 +1,0 @@
-Projenin akademik standartlara uygun olarak raporlandığı dizindir.
-Akademik yazılardan sorumlu arkadaşlar bu bölümde çalışacaklar.
