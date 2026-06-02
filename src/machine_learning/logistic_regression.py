@@ -3,7 +3,7 @@ import numpy as np
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import GridSearchCV
-import joblib # EKSİK 1: Modeli ve Scaler'ı kaydetmek için gerekli
+import joblib
 
 X_train = pd.read_csv('X_train_hazir.csv')
 X_test  = pd.read_csv('X_test_hazir.csv')
