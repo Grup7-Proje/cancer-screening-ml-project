@@ -92,6 +92,23 @@ cancer-screening-ml-project/
 └── extras              # Proje hakkında ekstra bilgilendirmeler
 ```
 ---
+## Kurulum ve Kullanım
+1. **Repoyu Klonlayın ve Kütüphaneleri Yükleyin:**
+  ```
+  git clone [https://github.com/KULLANICI_ADI/cancer-screening-ml-project.git](https://github.com/KULLANICI_ADI/cancer-screening-ml-project.git)
+  cd cancer-screening-ml-project
+  pip install -r requirements.txt
+  ```
+2. **Veri Setini Ekleyin:*
+  Dosya boyutu kısıtlamaları nedeniyle veri seti GitHub'da yoktur. data/drive.txt içindeki bağlantıdan X_train, X_test, y_train ve y_test dosyalarını indirip data/ klasörüne koyun.
+  
+3. **Modelleri Çalıştırın:**
+  Modelleri baştan eğitmek için src/ klasöründeki betikleri kullanabilirsiniz:
+  ```
+  python src/lojistik_regresyon.py
+  (Not: Hazır sonuçları ve grafikleri görmek için notebooks/ klasöründeki Jupyter dosyalarını inceleyebilirsiniz.)
+  ```
+
 
 <div align="center">
   <img width="480" height="320" alt="Flag_of_Turkey svg" src="https://github.com/user-attachments/assets/3eabddf6-0791-4fdf-a1a2-1241124a0aa3" />
