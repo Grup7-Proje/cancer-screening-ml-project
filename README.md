@@ -88,8 +88,7 @@ cancer-screening-ml-project/
 ├── .gitignore          # Git takibinden dışlanacak gereksiz ve büyük dosyalar
 ├── .gitkeep            # Boş klasör yapılarının korunması için komut
 ├── README.md           # Proje tanıtımı
-├── requirements.txt    # Python betikleri için gerekli kütüphaneler
-
+├── requirements.txt    # Python betikleri için gerekli kütüphanele
 └── extras              # Proje hakkında ekstra bilgilendirmeler
 ```
 ---
