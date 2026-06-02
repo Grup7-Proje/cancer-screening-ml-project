@@ -42,7 +42,7 @@ Tabular anket verilerinden anlamlı sonuçlar üretebilmek için aşağıdaki ve
 </div> 
 
 2. **Veri Ön İşleme (Data Preprocessing):**
-*Ana değişkenin belirlenmesi: Konumuz olan kanser taramaya yönelik değişken seçimimiz için veri setinde geniş kitleye hitap eden ve diğer verilerin   en çok korelasyon gösterebileceği değişkenin "CHCOCNC1" olduğuna kanaat getirdik.
+ *Ana değişkenin belirlenmesi: Konumuz olan kanser taramaya yönelik değişken seçimimiz için veri setinde geniş kitleye hitap eden ve diğer verilerin   en çok korelasyon gösterebileceği değişkenin "CHCOCNC1" olduğuna        kanaat getirdik.
  *Özellik Mühendisliği (Feature Engineering): Genel kanser teşhisi ile en çok korelasyon gösteren demografik ve davranışsal özelliklerin (Örn:
  `_AGEG5YR`, `SMOKE100`, `CHCSCNCR`) seçilmesi.
    * Seçilen Ana ve Bağımlı Değişkenler.
