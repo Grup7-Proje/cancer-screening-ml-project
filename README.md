@@ -105,7 +105,9 @@ cancer-screening-ml-project/
 3. **Modelleri Çalıştırın:**
   Modelleri baştan eğitmek için src/ klasöründeki betikleri kullanabilirsiniz:
   ```
-  python src/lojistik_regresyon.py
+  python src/logistic_regression.py
+  python src/naive_bayes.py
+  python src/ann_model_training.py
   (Not: Hazır sonuçları ve grafikleri görmek için notebooks/ klasöründeki Jupyter dosyalarını inceleyebilirsiniz.)
   ```
 
