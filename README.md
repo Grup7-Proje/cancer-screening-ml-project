@@ -99,7 +99,7 @@ cancer-screening-ml-project/
   cd cancer-screening-ml-project
   pip install -r requirements.txt
   ```
-2. **Veri Setini Ekleyin:*
+2. **Veri Setini Ekleyin:**
   Dosya boyutu kısıtlamaları nedeniyle veri seti GitHub'da yoktur. data/drive.txt içindeki bağlantıdan X_train, X_test, y_train ve y_test dosyalarını indirip data/ klasörüne koyun.
   
 3. **Modelleri Çalıştırın:**
