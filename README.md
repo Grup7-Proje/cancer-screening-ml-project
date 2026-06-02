@@ -84,10 +84,12 @@ cancer-screening-ml-project/
 ├── notebooks/          # Veri Analiz Bulguları (EDA) ve prototip modelleme Jupyter Notebook'ları
 ├── src/                # Model pipeline, veri ön işleme, eğitim ve tahmin Python betikleri
 ├── docs/               # Araştırma raporu, proje yönergeleri, CDC Codebook
+├── variables_codebook/ # Veri mimarlarınca Codebook'dan ekran görüntüsü alınmış anket verileri
 ├── .gitignore          # Git takibinden dışlanacak gereksiz ve büyük dosyalar
 ├── .gitkeep            # Boş klasör yapılarının korunması için komut
 ├── README.md           # Proje tanıtımı
 ├── requirements.txt    # Python betikleri için gerekli kütüphaneler
+
 └── extras              # Proje hakkında ekstra bilgilendirmeler
 ```
 ---
