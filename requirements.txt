@@ -1,4 +1,3 @@
-**LİBRARİES**
 pandas
 numpy
 scikit-learn
