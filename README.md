@@ -26,14 +26,14 @@ Bu proje, kanser taraması, risk faktörlerinin tespiti ve erken teşhis süreç
 
 Çalışmamızda **CDC (Centers for Disease Control and Prevention)** tarafından yayınlanan [2024 BRFSS (Behavioral Risk Factor Surveillance System](https://www.cdc.gov/brfss/index.html) veri seti kullanılmıştır. 
 
-* **İçerik:** Kanser öyküsü (cilt kanseri ve diğer kanser türleri), sigara/alkol tüketimi, fiziksel aktivite, kronik hastalık geçmişi ve sosyodemografik anket cevapları.
-* **Veri Boyutu:** Veri seti oldukça büyük hacimli olduğundan (orijinal .xpt ve işlenmiş .csv dosyaları), GitHub reposunda barındırılmamaktadır (Bkz. *data/drive.txt*).
+* **İçerik:** 7. grubun konusu olan kanser araştırmaya göre başından sonuna kadar temizlenmiş veri setinde genel olarak pek çok kanser türleri, sigara/alkol tüketimi, fiziksel aktivite, kronik hastalık geçmişi ve sosyodemografik anket cevapları bulunmaktadır.
+* **Veri Boyutu:** Hem işlenmiş hem de orjinal veri setleri oldukça büyük hacimli olduğundan GitHub reposunda değil, grubumuzun drive adresinde barındırılmaktadır (Bkz. *data/drive.txt*).
 
 ## Metodoloji
 
 Tabular anket verilerinden anlamlı sonuçlar üretebilmek için aşağıdaki veri bilimi boru hattı (pipeline) izlenmiştir:
 
-1. **Veri Okuma ve Dönüştürme:** CDC BRFSS 2024 veri setinin [Codebook'u](https://www.cdc.gov/brfss/annual_data/2024/zip/codebook24_llcp-v2-508.zip), veri mimarlarınca detaylıca incelenmiş olup, proje konusu kapsamında ana ve bağımsız değişkenler kararlaştırılmıştır.
+ CDC BRFSS 2024 veri setinin [Codebook'u](https://www.cdc.gov/brfss/annual_data/2024/zip/codebook24_llcp-v2-508.zip), veri mimarlarınca detaylıca incelenmiş olup, proje konusu kapsamında ana ve bağımsız değişkenler üzerinde tartışılmıştır.
 <div align="center">
   <img width="885" height="488" alt="CHCOCNC1" src="https://github.com/user-attachments/assets/37263639-0a21-426e-8a13-092f0d1d697a" />
   <p><small>resim 1.0 - Ana Değişken CHCOCNC1</small></p>
@@ -41,9 +41,11 @@ Tabular anket verilerinden anlamlı sonuçlar üretebilmek için aşağıdaki ve
   <p><small>resim 2.0 - Yan Değişken Örn. SMOKE100</small></p>
 </div> 
 
-3. SAS `.xpt` formatındaki verilerin Python ortamına aktarılması ve Pandas DataFrame formatına dönüştürülmesi.
-4. **Veri Ön İşleme (Data Preprocessing):** 
-   * Ana ve bağımsız değişkenlerin belirlenmesi.
+2. **Veri Ön İşleme (Data Preprocessing):**
+ *Ana değişkenin belirlenmesi: Konumuz olan kanser taramaya yönelik değişken seçimimiz için veri setinde geniş kitleye hitap eden ve diğer verilerin   en çok korelasyon gösterebileceği değişkenin "CHCOCNC1" olduğuna kanaat getirdik.
+ *Özellik Mühendisliği (Feature Engineering): Genel kanser teşhisi ile en çok korelasyon gösteren demografik ve davranışsal özelliklerin (Örn:
+ `_AGEG5YR`, `SMOKE100`, `CHCSCNCR`) seçilmesi.
+   * Seçilen Ana ve Bağımlı Değişkenler.
    ```
    Ana Değişkenler:
    CHCOCNC1: Melanom veya herhangi bir kanser teşhisi konuldu mu? (30 kategori)
@@ -65,9 +67,12 @@ Tabular anket verilerinden anlamlı sonuçlar üretebilmek için aşağıdaki ve
    EDUCA:    Tamamladığınız en yüksek eğitim durumunuz nedir?
    _BMI5CAT: Vücut Kitle Endeksiniz nedir? (4 categories of BMI)
    ```
+   
+1. **Veri Okuma ve Dönüştürme:**
+3. SAS `.xpt` formatındaki verilerin Python ortamına aktarılması ve Pandas DataFrame formatına dönüştürülmesi.
    * BRFSS özelindeki "Bilmiyorum/Reddedildi" (örn: 77, 99 kodlu) yanıtlarının eksik veri (NaN) olarak ele alınması.
+   * İkili yanıtlara sahip değişken değerlerinin, öğrenme performansı açısından 1 ve 0'lar şeklinde yeniden değiştirilmesi.
    * Hedef değişkenin (kanser tanısı / tarama durumu) belirlenmesi ve sınıf dengesizliklerinin (SMOTE vb. yöntemlerle) giderilmesi.
-5. **Özellik Mühendisliği (Feature Engineering):** Genel kanser teşhisi ile en çok korelasyon gösteren demografik ve davranışsal özelliklerin (Örn: `_AGEG5YR`, `SMOKE100`, `CHCSCNCR`) seçilmesi.
 6. **Modelleme:** Tabular verilerde yüksek performans gösteren Lojistik Regresyon, Bayesyen Yaklaşım ve Yapay Sinir Ağları kullanılarak oluşturulan modellerin eğitilmesi:
 7. **Değerlendirme (Evaluation):** Modeller; Doğruluk (Accuracy), Hassasiyet (Precision), Duyarlılık (Recall), F1-Skoru ve ROC-AUC metrikleri ile istatistiksel olarak ölçülmüş ve birbirleriyle kıyaslanmıştır.
 ---
@@ -78,8 +83,8 @@ cancer-screening-ml-project/
 │
 ├── data/               # CDC BRFSS ham ve düzenlenmiş (.csv) veri setleri
 ├── notebooks/          # Keşifçi Veri Analizi (EDA) ve prototip modelleme Jupyter Notebook'ları
-├── src/                # Model pipeline, veri ön işleme, eğitim ve tahmin Python (.py) betikleri
-├── docs/               # Araştırma raporları, literatür taraması ve teknik mimari belgeleri
+├── src/                # Model pipeline, veri ön işleme, eğitim ve tahmin Python betikleri
+├── docs/               # Araştırma raporu.
 ├── .gitignore          # Git takibinden dışlanacak gereksiz ve büyük dosyalar
 ├── .gitkeep            # Boş klasör yapılarının korunması için
 ├── README.md           # Proje tanıtımı
