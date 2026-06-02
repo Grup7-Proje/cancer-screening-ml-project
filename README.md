@@ -97,7 +97,3 @@ cancer-screening-ml-project/
   <img width="480" height="320" alt="Flag_of_Turkey svg" src="https://github.com/user-attachments/assets/3eabddf6-0791-4fdf-a1a2-1241124a0aa3" />
 </div>  
 <div align="center">
-<div align="center">
-  <img width="552" height="664" alt="ataturk" src="https://github.com/user-attachments/assets/78fbb9f4-3472-43f3-b809-440d3070ed84" />
-  <p>"1881-193∞"</p>
-</div>
