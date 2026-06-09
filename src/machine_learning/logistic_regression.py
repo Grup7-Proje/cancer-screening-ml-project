@@ -11,7 +11,7 @@ y_train = pd.read_csv('y_train_hazir.csv').squeeze()
 y_test  = pd.read_csv('y_test_hazir.csv').squeeze()
 
 # Farklı değişkenlerin farklı sayısal aralıklarda sonuçlara sahip olması öğrenme modelinin yanlılık göstermesine sebep olabilir.
-# Bu yüzden aşağıdaki veri ölçekleme bölümünde her bir değişkenin standart sapmayı 1, ortlamayı 0 yaparak tarafsız başlangıç yapıyor diyebiliriz. 
+# Bu yüzden aşağıdaki veri ölçekleme bölümünde Z-skoru yöntemiyle her bir değişkenin standart sapması 1, ortlaması 0 yapılarak tarafsız başlangıç yapılıyor diyebiliriz. 
 scaler = StandardScaler()
 X_train_scaled = scaler.fit_transform(X_train)
 X_test_scaled = scaler.transform(X_test)
