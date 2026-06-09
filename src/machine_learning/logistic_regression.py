@@ -10,7 +10,8 @@ X_test  = pd.read_csv('X_test_hazir.csv')
 y_train = pd.read_csv('y_train_hazir.csv').squeeze()
 y_test  = pd.read_csv('y_test_hazir.csv').squeeze()
 
-
+# Farklı değişkenlerin farklı sayısal aralıklarda sonuçlara sahip olması öğrenme modelinin yanlılık göstermesine sebep olabilir.
+# Bu yüzden aşağıdaki veri ölçekleme bölümünde her bir değişkenin standart sapmayı 1, ortlamayı 0 yaparak tarafsız başlangıç yapıyor diyebiliriz. 
 scaler = StandardScaler()
 X_train_scaled = scaler.fit_transform(X_train)
 X_test_scaled = scaler.transform(X_test)
@@ -20,7 +21,6 @@ print("Veri ölçeklendirildi ve 'scaler_lr.pkl' kaydedildi.")
 # MODELİ İSKELETİ. !!!WEİGHT BALANCİNG!!!
 # class_weight='balanced'  kanser olanlar az olduğu için azınlık sınıfına daha fazla ağırlık vermeli ki model hatalı olmasın.
 # max_iter=1000  modelin parametreleri bulması için max iterasyon sayısını ifade eder.
-# ─────────────────────────────────────────────
 model_lr = LogisticRegression(
     class_weight='balanced',
     max_iter=1000,
